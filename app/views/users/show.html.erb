@@ -1,0 +1,16 @@
+<%= content_for :load_users do %>
+	<%= javascript_tag do %>
+		users = <%= raw @single_user.to_json %>
+	<% end %>
+<% end %>
+
+<%= content_for :user_page do %>
+<div class="overlay_map">
+	<div class="content_realignment about_align">
+		<div class="text_align">
+		    <h3>Welcome to <%= @public_user.name %>'s public profile on Project Azimuth!</h3>
+		    <p>You can view <%= @public_user.name %>'s progress on the map displayed below and track their vessel across the sea. <br/> For more information, scroll down to see what Azimuth is about.</p> 
+		</div>
+	</div>
+</div>
+<% end %>
